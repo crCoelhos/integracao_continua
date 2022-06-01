@@ -16,8 +16,8 @@ jobs:
           distribution: 'zulu'
       - name: Maven Compile/Test/Package
         run: mvn --activate-profiles prod package
-      - name: Merge branche
-        uses: devmasx/merge-branche@1.4.0
+      - name: Merge branch
+        uses: devmasx/merge-branch@1.4.0
         with:
           type: now
           target_branch: main
