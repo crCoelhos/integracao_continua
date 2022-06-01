@@ -14,5 +14,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'zulu'
-      - name: Maven Compile/Test/Package
-        run: mvn --batch-mode --activate-profiles prod package
+      - name: Maven Compile/Package
+        run: mvn package -DskipTests
+      - name: Maven Test
+        run: mvn test
